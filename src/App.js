@@ -43,8 +43,8 @@ function App () {
       <div>
         <Selector />
         <div>
-          {renderLastUpdatedAt()}
-          {renderRefreshButton()}
+          {() => renderLastUpdatedAt()}
+          {() => renderRefreshButton()}
         </div>
         {isFetching && <h2>Loading...</h2>}
         {!isFetching && isEmpty && <h2>Empty.</h2>}
